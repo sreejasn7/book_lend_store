@@ -10,7 +10,8 @@ from django.contrib.auth.models import User
 
 
 def index(request):
-    return render(request, 'my-account.html')
+    return render(request, 'index.html')
+    #return render(request, 'my-account.html')
 
 
 def register(request):
@@ -18,7 +19,7 @@ def register(request):
         print(request.POST)
         email = request.POST['email']
         password = request.POST['password']
-        # user = User.objects.create_user(email, email, password)
+        user = User.objects.create_user(email, email, password)
         return redirect('/')
 
 
