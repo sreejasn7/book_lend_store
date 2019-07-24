@@ -421,15 +421,16 @@
 					<div class="col-lg-6 col-12">
 						<div class="my__account__wrapper">
 							<h3 class="account__title">Register</h3>
-							<form action="#">
+							<form action="{% url 'register' %}" method="POST">
+                                {% csrf_token %}
 								<div class="account__form">
 									<div class="input__box">
 										<label>Email address <span>*</span></label>
-										<input type="email">
+										<input name='email' type="email">
 									</div>
 									<div class="input__box">
 										<label>Password<span>*</span></label>
-										<input type="password">
+										<input name ='password' type="password">
 									</div>
 									<div class="form__btn">
 										<button>Register</button>
