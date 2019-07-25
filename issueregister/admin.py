@@ -1,3 +1,5 @@
 from django.contrib import admin
+from issueregister.models import RentBooks
 
-# Register your models here.
+
+admin.site.register(RentBooks)

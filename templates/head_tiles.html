@@ -1,4 +1,6 @@
+
 {% load staticfiles %}
+
 <header id="wn__header" class="oth-page header__area header__absolute sticky__header">
 			<div class="container-fluid">
 				<div class="row">
@@ -12,33 +14,7 @@
 					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="mainmenu__nav">
 							<ul class="meninmenu d-flex justify-content-start">
-								<li class="drop with--one--item"><a href="index.html">Home</a></li>
-								<!--<li class="drop"><a href="#">Shop</a>-->
-									<!--<div class="megamenu mega03">-->
-										<!--&lt;!&ndash;<ul class="item item03">&ndash;&gt;-->
-											<!--&lt;!&ndash;<li class="title">Shop Layout</li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="shop-grid.html">Shop Grid</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="single-product.html">Single Product</a></li>&ndash;&gt;-->
-										<!--&lt;!&ndash;</ul>&ndash;&gt;-->
-										<!--&lt;!&ndash;<ul class="item item03">&ndash;&gt;-->
-											<!--&lt;!&ndash;<li class="title">Shop Page</li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="my-account.html">My Account</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="cart.html">Rent Books</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="checkout.html">Checkout Page</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="wishlist.html">Wishlist Page</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="error404.html">404 Page</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="faq.html">Faq Page</a></li>&ndash;&gt;-->
-										<!--&lt;!&ndash;</ul>&ndash;&gt;-->
-										<!--&lt;!&ndash;<ul class="item item03">&ndash;&gt;-->
-											<!--&lt;!&ndash;<li class="title">Bargain Books</li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="shop-grid.html">Bargain Bestsellers</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="shop-grid.html">Activity Kits</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="shop-grid.html">B&N Classics</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="shop-grid.html">Books Under $5</a></li>&ndash;&gt;-->
-											<!--&lt;!&ndash;<li><a href="shop-grid.html">Bargain Books</a></li>&ndash;&gt;-->
-										<!--&lt;!&ndash;</ul>&ndash;&gt;-->
-									<!--</div>-->
-								<!--</li>-->
+								<li class="drop with--one--item"><a href="/">Home</a></li>
 								<li class="drop"><a href="shop-grid.html">Books</a>
 									<div class="megamenu mega03" style="width: 300px;">
 										<!--<ul class="item item03">-->
@@ -57,18 +33,17 @@
 											<!--<li><a href="shop-grid.html">Fiction/Fantasy</a></li>-->
 											<!--<li><a href="shop-grid.html">Sleeveless</a></li>-->
 										<!--</ul>-->
+
 										<ul class="item item03">
 											<li class="title">Collections</li>
-											<li><a href="shop-grid.html">All </a></li>
-											<li><a href="shop-grid.html">Science </a></li>
-											<li><a href="shop-grid.html">Fiction/Fantasy</a></li>
-											<li><a href="shop-grid.html">Self-Improvemen</a></li>
-											<li><a href="shop-grid.html">Home & Garden</a></li>
-											<li><a href="shop-grid.html">Humor Books</a></li>
+{#                                                {{ book_types }}#}
+                                              {% for books in book_types %}
+											        <li><a href="">{{ books.book_type }} </a></li>
+                                            {% endfor %}
 										</ul>
 									</div>
 								</li>
-								<!--<li class="drop"><a href="shop-grid.html">Kids</a>-->
+								<li class="drop"><a href="/issue">ADMIN PAGE</a>
 									<!--<div class="megamenu mega02">-->
 										<!--<ul class="item item02">-->
 											<!--<li class="title">Top Collections</li>-->
@@ -87,7 +62,7 @@
 											<!--<li><a href="shop-grid.html">Hoodies</a></li>-->
 										<!--</ul>-->
 									<!--</div>-->
-								<!--</li>-->
+								</li>
 								<!--<li class="drop"><a href="#">Pages</a>-->
 									<!--<div class="megamenu dropdown">-->
 										<!--<ul class="item item01">-->
@@ -203,52 +178,52 @@
 							<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
 								<div class="searchbar__content setting__block">
 									<div class="content-inner">
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>Currency</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">USD - US Dollar</span>
-													<ul class="switcher-dropdown">
-														<li>GBP - British Pound Sterling</li>
-														<li>EUR - Euro</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>Language</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">English01</span>
-													<ul class="switcher-dropdown">
-														<li>English02</li>
-														<li>English03</li>
-														<li>English04</li>
-														<li>English05</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="switcher-currency">
-											<strong class="label switcher-label">
-												<span>Select Store</span>
-											</strong>
-											<div class="switcher-options">
-												<div class="switcher-currency-trigger">
-													<span class="currency-trigger">Fashion Store</span>
-													<ul class="switcher-dropdown">
-														<li>Furniture</li>
-														<li>Shoes</li>
-														<li>Speaker Store</li>
-														<li>Furniture</li>
-													</ul>
-												</div>
-											</div>
-										</div>
+{#										<div class="switcher-currency">#}
+{#											<strong class="label switcher-label">#}
+{#												<span>Currency</span>#}
+{#											</strong>#}
+{#											<div class="switcher-options">#}
+{#												<div class="switcher-currency-trigger">#}
+{#													<span class="currency-trigger">USD - US Dollar</span>#}
+{#													<ul class="switcher-dropdown">#}
+{#														<li>GBP - British Pound Sterling</li>#}
+{#														<li>EUR - Euro</li>#}
+{#													</ul>#}
+{#												</div>#}
+{#											</div>#}
+{#										</div>#}
+{#										<div class="switcher-currency">#}
+{#											<strong class="label switcher-label">#}
+{#												<span>Language</span>#}
+{#											</strong>#}
+{#											<div class="switcher-options">#}
+{#												<div class="switcher-currency-trigger">#}
+{#													<span class="currency-trigger">English01</span>#}
+{#													<ul class="switcher-dropdown">#}
+{#														<li>English02</li>#}
+{#														<li>English03</li>#}
+{#														<li>English04</li>#}
+{#														<li>English05</li>#}
+{#													</ul>#}
+{#												</div>#}
+{#											</div>#}
+{#										</div>#}
+{#										<div class="switcher-currency">#}
+{#											<strong class="label switcher-label">#}
+{#												<span>Select Store</span>#}
+{#											</strong>#}
+{#											<div class="switcher-options">#}
+{#												<div class="switcher-currency-trigger">#}
+{#													<span class="currency-trigger">Fashion Store</span>#}
+{#													<ul class="switcher-dropdown">#}
+{#														<li>Furniture</li>#}
+{#														<li>Shoes</li>#}
+{#														<li>Speaker Store</li>#}
+{#														<li>Furniture</li>#}
+{#													</ul>#}
+{#												</div>#}
+{#											</div>#}
+{#										</div>#}
 										<div class="switcher-currency">
 											<strong class="label switcher-label">
 												<span>My Account</span>
@@ -256,11 +231,12 @@
 											<div class="switcher-options">
 												<div class="switcher-currency-trigger">
 													<div class="setting__menu">
-														<span><a href="#">Compare Product</a></span>
-														<span><a href="#">My Account</a></span>
-														<span><a href="#">My Wishlist</a></span>
-														<span><a href="#">Sign In</a></span>
-														<span><a href="#">Create An Account</a></span>
+{#														<span><a href="#">Compare Product</a></span>#}
+{#														<span><a href="#">My Account</a></span>#}
+{#														<span><a href="#">My Wishlist</a></span>#}
+														<span><a href="/register">Sign In/ Register</a></span>
+														<span><a href="/logout">Sign Out</a></span>
+{#														<span><a href="/register">Create An Account</a></span>#}
 													</div>
 												</div>
 											</div>

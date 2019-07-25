@@ -5,5 +5,5 @@ from django.http import HttpResponse
 
 
 def book_keeping_index(request):
-    return HttpResponse("You are at Book store .")
+    return render(request, 'shop-grid.html')
 

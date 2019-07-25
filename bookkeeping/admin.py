@@ -1,10 +1,6 @@
 from django.contrib import admin
+from bookkeeping.models import BookChargeSheet, Book
 
-# Register your models here.
 
-from django.contrib import admin
-from bookkeeping.models import BookChargeSheet
-
-class AuthorAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(BookChargeSheet, AuthorAdmin)
+admin.site.register(BookChargeSheet)
+admin.site.register(Book)

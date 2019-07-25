@@ -1,9 +1,7 @@
 from django.shortcuts import render
-
-# Create your views here.
 from django.http import HttpResponse
 
 
-def add_to_rent(request):
-    return HttpResponse("You are at Book store .")
+def view_rent_page(request):
+    return render(request, 'wishlist.html')
 
