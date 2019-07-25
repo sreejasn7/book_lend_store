@@ -13,8 +13,8 @@ from bookkeeping.models import BookChargeSheet
 
 def index(request):
     # book_types= BookChargeSheet.objects.all()
-    # return render(request, 'index.html')
-    return redirect('/store')
+    return render(request, 'index.html')
+    # return redirect('/store')
 
 
 def register(request):
@@ -36,7 +36,7 @@ def login_user(request):
         if user:
             login(request, user)
             print("session set for user")
-            return redirect('/')
+            return redirect('/store/')
     else:
         print("Not logged in")
         return redirect('/')

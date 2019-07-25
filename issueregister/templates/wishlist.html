@@ -2,7 +2,6 @@
 <html class="no-js" lang="zxx">
 
 {% load staticfiles %}
-{% load common_tags %}
 {% include "head.html" %}
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 
@@ -16,7 +15,6 @@
 		
 		<!-- Header -->
 		    {% include "head_tiles.html" %}
-            {% get_story_item %}
 		<!-- //Header -->
 		<!-- Start Search Popup -->
 		<div class="box-search-content search_active block-bg close__top">
@@ -59,7 +57,7 @@
                         <div class="wishlist-content">
                             <form action="#" class="form-inline">
                                 <div class="wishlist-table wnro__table table-responsive">
-{#
+
                                     <div class="row" style="padding-bottom: 50px;">
 
                                         <div class="col-md-12">

@@ -73,6 +73,12 @@ TEMPLATES = [
         },
     },
 ]
+TEMPLATE_CONTEXT_PROCESSORS = {
+    "django.core.context_processors.request",
+   "django.core.context_processors.media",
+   "django.contrib.messages.context_processors.messages",
+    "django.contrib.auth.context_processors.auth",
+}
 
 WSGI_APPLICATION = 'library.wsgi.application'
 

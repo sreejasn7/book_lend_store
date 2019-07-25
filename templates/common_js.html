@@ -4,3 +4,35 @@
 	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 	<script src="{% static 'js/plugins.js' %}"></script>
 	<script src="{% static 'js/active.js' %}"></script>
+	<script src="{% static 'js/custom_book.js' %}"></script>
+
+<script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
+<script>
+
+
+$( document ).ready(function() {
+
+
+     $.ajax({
+                url : '/store/book_types/',
+                type : "POST",
+                data: {csrfmiddlewaretoken: window.CSRF_TOKEN},
+
+           })
+                .done(function(data) {
+                    console.log("Success!" , data);
+                {#alert("khkdfhg")#}
+                        $.each(data['book_types'], function(i, index) {
+                            console.log(index)
+                            $("#book_types").append("<li><a href='/store/'"+ index.id+ "></a>"+ index.book_type +"</li>")
+                        });
+
+
+
+                });
+
+
+});
+
+
+</script>
