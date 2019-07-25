@@ -1,13 +1,14 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render, redirect
 from bookkeeping.models import Book
 from django.contrib import messages
-from issueregister.models import RentBooks , Book
+from issueregister.models import RentBooks, Book
 from django.contrib.auth.models import User
 from .models import BookChargeSheet
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
 
-def book_keeping_index(request,book_type_id=0):
+
+def book_keeping_index(request, book_type_id=0):
     if book_type_id == 0:
         books = Book.objects.all()
     else:
@@ -17,12 +18,10 @@ def book_keeping_index(request,book_type_id=0):
 
 def book_detail(request, book_id=0):
     book_preview = Book.objects.get(id=book_id)
-    return render(request, 'single-product.html' ,{"book_details": book_preview})
-
+    return render(request, 'single-product.html', {"book_details": book_preview})
 
 
 def rent_books(request):
-    print ("Print requet usersss " , request.user)
     if request.user.is_authenticated:
         if request.method == "POST":
             book_obj = Book.objects.get(id=request.POST['book_id'])
@@ -42,4 +41,4 @@ def get_book_charge_sheet(request):
     for i in dataset:
         result_book_dict.append(model_to_dict(i))
     return_dict = {'book_types':result_book_dict}
-    return JsonResponse(return_dict,safe=True)
+    return JsonResponse(return_dict, safe=True)
