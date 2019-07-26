@@ -9,9 +9,8 @@ services:
     image: docker_tutorial_django
     stdin_open: true
     tty: true
-    command: python manage.py runserver 0.0.0.0:8000
+    command: bash -c "./entry.sh && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
       - "8000:8000"
-    
