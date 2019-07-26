@@ -168,7 +168,6 @@
 
                        })
                             .done(function(data) {
-                                console.log("Success!" , data);
                                 table.destroy();
 
                                  table = $('#example').DataTable({
@@ -203,10 +202,7 @@
             $('#sumbit_table').click( function() {
                 var data = table.$('input, select').serialize();
                 var result = {'result':data,csrfmiddlewaretoken: window.CSRF_TOKEN}
-                console.log(data)
-
-
-                  $.ajax({
+                 $.ajax({
                             url : '/store/calculate_rent/',
                             type : "POST",
                             data: {csrfmiddlewaretoken: window.CSRF_TOKEN,result:data },

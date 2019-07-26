@@ -12,8 +12,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from django.contrib.auth.models import User
 # from bookkeeping.models import Book, BookChargeSheet
 from django.test import TestCase
-# from django.db.migrations.executor import MigrationExecutor
-# from django.db.migrations import executor
 
 
 class SetUpModelTest(TestCase):

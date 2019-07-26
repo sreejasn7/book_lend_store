@@ -1,20 +1,10 @@
-from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
-
-# Create your views here.
-from django.http import HttpResponse
 from django.shortcuts import render , redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from bookkeeping.models import BookChargeSheet
 
 
 def index(request):
-    # book_types= BookChargeSheet.objects.all()
     return render(request, 'index.html')
-    # return redirect('/store')
 
 
 def register(request):
