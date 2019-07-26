@@ -21,6 +21,15 @@ try:
 except:
     print("Exception")
 
+
+# try:
+
+book_charges, created = BookChargeSheet.objects.get_or_create(story_type='S2', book_type='Regular', days=1, per_day_charge=1.5, min_charge=0, min_charge_days=0 )
+book_charges, created = BookChargeSheet.objects.get_or_create(story_type='S2', book_type='Fiction', days=1, per_day_charge=3, min_charge=0, min_charge_days=0 )
+book_charges, created = BookChargeSheet.objects.get_or_create(story_type='S2', book_type='Fiction', days=1, per_day_charge=1.5, min_charge=0, min_charge_days=0 )
+# except:
+#     print("Exception")
+
 # INSERT BOOKS
 try:
     book_charge_set=BookChargeSheet.objects.all()

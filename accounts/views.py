@@ -13,7 +13,7 @@ def register(request):
         email = request.POST['email']
         password = request.POST['password']
         user = User.objects.create_user(email, email, password)
-        return render(request, 'messages.html')
+        return redirect('/')
     else:
         return render(request, 'my-account.html')
 
