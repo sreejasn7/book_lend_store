@@ -1476,3 +1476,78 @@ console.error: PushService:
 1564128372800	Marionette	TRACE	[4294967297] Received DOM event pageshow for http://127.0.0.1:8000/
 1564128372801	Marionette	DEBUG	0 <- [1,23,null,{"value":null}]
 1564128372864	Marionette	DEBUG	Closed connection 0
+[Parent 21622, Gecko_IOThread] WARNING: pipe error (78): Connection reset by peer: file /build/firefox-kjXGHc/firefox-68.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+[Parent 21622, Gecko_IOThread] WARNING: pipe error (64): Connection reset by peer: file /build/firefox-kjXGHc/firefox-68.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1564128411711	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1564128411711	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1564128411712	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1564128411712	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1564128411712	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1564128411712	Marionette	DEBUG	Resetting recommended pref browser.newtabpage.enabled
+1564128411712	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1564128411713	Marionette	DEBUG	Resetting recommended pref browser.search.update
+1564128411713	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1564128411713	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1564128411713	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1564128411713	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1564128411714	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnOpen
+1564128411714	Marionette	DEBUG	Resetting recommended pref browser.usedOnWindows10.introURL
+1564128411714	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1564128411714	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1564128411714	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1564128411714	Marionette	DEBUG	Resetting recommended pref dom.disable_open_during_load
+1564128411714	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1564128411714	Marionette	DEBUG	Resetting recommended pref dom.max_chrome_script_run_time
+1564128411715	Marionette	DEBUG	Resetting recommended pref dom.max_script_run_time
+1564128411715	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1564128411715	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1564128411715	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1564128411715	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1564128411715	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1564128411715	Marionette	DEBUG	Resetting recommended pref security.fileuri.strict_origin_policy
+1564128411715	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1564128411715	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1564128411716	Marionette	DEBUG	Resetting recommended pref signon.rememberSignons
+1564128411716	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1564128411716	Marionette	INFO	Stopped listening on port 34275
+1564128411716	Marionette	DEBUG	Remote service is inactive
+[Parent 21428, Gecko_IOThread] WARNING: pipe error (70): Connection reset by peer: file /build/firefox-kjXGHc/firefox-68.0.1+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 358
+1564128412955	Marionette	TRACE	Received observer notification xpcom-will-shutdown
+1564128412955	Marionette	DEBUG	Resetting recommended pref app.update.disabledForTesting
+1564128412955	Marionette	DEBUG	Resetting recommended pref apz.content_response_timeout
+1564128412955	Marionette	DEBUG	Resetting recommended pref browser.contentblocking.introCount
+1564128412955	Marionette	DEBUG	Resetting recommended pref browser.download.panel.shown
+1564128412955	Marionette	DEBUG	Resetting recommended pref browser.newtabpage.enabled
+1564128412956	Marionette	DEBUG	Resetting recommended pref browser.pagethumbnails.capturing_disabled
+1564128412956	Marionette	DEBUG	Resetting recommended pref browser.search.update
+1564128412956	Marionette	DEBUG	Resetting recommended pref browser.tabs.disableBackgroundZombification
+1564128412957	Marionette	DEBUG	Resetting recommended pref browser.tabs.remote.separatePrivilegedContentProcess
+1564128412957	Marionette	DEBUG	Resetting recommended pref browser.tabs.unloadOnLowMemory
+1564128412957	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnCloseOtherTabs
+1564128412958	Marionette	DEBUG	Resetting recommended pref browser.tabs.warnOnOpen
+1564128412958	Marionette	DEBUG	Resetting recommended pref browser.usedOnWindows10.introURL
+1564128412958	Marionette	DEBUG	Resetting recommended pref browser.urlbar.suggest.searches
+1564128412962	Marionette	DEBUG	Resetting recommended pref datareporting.policy.dataSubmissionPolicyAccepted
+1564128412962	Marionette	DEBUG	Resetting recommended pref dom.disable_beforeunload
+1564128412962	Marionette	DEBUG	Resetting recommended pref dom.disable_open_during_load
+1564128412962	Marionette	DEBUG	Resetting recommended pref dom.file.createInChild
+1564128412963	Marionette	DEBUG	Resetting recommended pref dom.max_chrome_script_run_time
+1564128412963	Marionette	DEBUG	Resetting recommended pref dom.max_script_run_time
+1564128412963	Marionette	DEBUG	Resetting recommended pref extensions.getAddons.cache.enabled
+1564128412964	Marionette	DEBUG	Resetting recommended pref extensions.webservice.discoverURL
+1564128412964	Marionette	DEBUG	Resetting recommended pref network.http.prompt-temp-redirect
+1564128412964	Marionette	DEBUG	Resetting recommended pref network.http.speculative-parallel-limit
+1564128412964	Marionette	DEBUG	Resetting recommended pref security.certerrors.mitm.priming.enabled
+1564128412964	Marionette	DEBUG	Resetting recommended pref security.fileuri.strict_origin_policy
+1564128412964	Marionette	DEBUG	Resetting recommended pref security.notification_enable_delay
+1564128412964	Marionette	DEBUG	Resetting recommended pref signon.autofillForms
+1564128412964	Marionette	DEBUG	Resetting recommended pref signon.rememberSignons
+1564128412965	Marionette	DEBUG	Resetting recommended pref toolkit.cosmeticAnimations.enabled
+1564128412965	Marionette	INFO	Stopped listening on port 36865
+1564128412966	Marionette	DEBUG	Remote service is inactive
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
