@@ -35,6 +35,7 @@ def rent_books(request):
     else:
         return redirect('/register')
 
+
 def get_book_charge_sheet(request):
     dataset = BookChargeSheet.objects.all()
     result_book_dict = []
@@ -42,3 +43,19 @@ def get_book_charge_sheet(request):
         result_book_dict.append(model_to_dict(i))
     return_dict = {'book_types':result_book_dict}
     return JsonResponse(return_dict, safe=True)
+
+
+def get_book_rent_price(request):
+    result_array = request.POST['result'].split('&')
+    total = 0
+    for i in result_array:
+        key_value = i.split('=')
+        total += calculate_price(int(key_value[0]), int(key_value[1]))
+    return_dict = {'success': True, 'total': total}
+    return JsonResponse(return_dict, safe=True)
+
+
+def calculate_price(book_id, num):
+    book_obj = Book.objects.get(id=book_id)
+    rent = num * book_obj.book_charge.per_day_charge
+    return rent

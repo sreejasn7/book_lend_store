@@ -24,7 +24,9 @@
 										</ul>
 									</div>
 								</li>
-								<li class="drop"><a href="/issue">ADMIN PAGE</a>
+                                 {% if user.is_superuser %}
+								    <li class="drop"><a href="/issue">ADMIN PAGE</a>
+                                {% endif %}
 
 							</ul>
 						</nav>

@@ -18,7 +18,7 @@
 		<!-- //Header -->
 		<!-- Start Search Popup -->
 		<div class="box-search-content search_active block-bg close__top">
-			<form id="search_mini_form" class="minisearch" action="#">
+			<form id="search_mini_form" class="minisearch" >
 				<div class="field__search">
 					<input type="text" placeholder="Search entire store here...">
 					<div class="action">
@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="wishlist-content">
-                            <form action="#" class="form-inline">
+                            <div class="">
                                 <div class="wishlist-table wnro__table table-responsive">
 
                                     <div class="row" style="padding-bottom: 50px;">
@@ -67,6 +67,7 @@
 {#                                                 </div>#}
                                               <div class="col-sm-8" >
                                                 <select id="customer" class="form-control" style="width:50%">
+                                                        <option >Please Select --  </option>
                                                         {% for c in customers %}
                                                         <option value ={{ c.id }} >{{ c.username }} </option>
                                                      {% endfor %}
@@ -110,33 +111,34 @@
 
                                 </div>
 
-                                <div class="row" style="padding-top: 30px;width:100%">
-                                    <div class="col-md-12" >
-
-                                        <div class="col-md-8" >
-
-                                                     <button id = 'sumbit_table' type="submit" class="btn btn-primary">Caclulate</button>
 
 
-                                            </div>
-
-
-                                        <div class="col-md-4" >
-                                            <div class="form-group">
-                                                <label class="" for="total">Total</label>
-
-                                                <input id='total' type="text">
-
-
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                    <div class="row" style="padding-top: 30px;width:100%">
+                                    <div class="col-md-12" >
+
+                                        <span class="col-md-8" >
+
+                                             <button id = 'sumbit_table' type="submit" class="btn btn-primary">Caclulate</button>
+
+
+                                            </span>
+
+
+                                        <span class="col-md-4" style="position: inherit;float: right;">
+
+                                                <label class="" for="total">Total</label>
+
+                                                <input id='total' type="text" style="height:30px">
+
+
+
+                                        </span>
+                                        </div>
+                                    </div>
             </div>
         </div>
         <!-- cart-main-area end --> 
@@ -156,12 +158,9 @@
 
     <script>
         $(document).ready(function() {
-
                 var table = $('#example').DataTable({});
                 $("#customer").on('change', function() {
-                      alert( this.value );
-
-                       $.ajax({
+                      $.ajax({
                             url : '/issue/customer_rented/',
                             type : "POST",
                             data: {csrfmiddlewaretoken: window.CSRF_TOKEN,customer: this.value },
@@ -201,12 +200,25 @@
 
                     });
 
-            $('button').click( function() {
+            $('#sumbit_table').click( function() {
                 var data = table.$('input, select').serialize();
+                var result = {'result':data,csrfmiddlewaretoken: window.CSRF_TOKEN}
                 console.log(data)
 
-                return false;
-            } );
+
+                  $.ajax({
+                            url : '/store/calculate_rent/',
+                            type : "POST",
+                            data: {csrfmiddlewaretoken: window.CSRF_TOKEN,result:data },
+                            dataType: 'json',
+
+                       }).done(function(data) {
+                                console.log("Success!" , data);
+                                $('#total').val(data['total'])
+
+                            });
+
+            });
         } );
 
     </script>
