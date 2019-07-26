@@ -50,7 +50,7 @@ def get_book_rent_price(request):
     total = 0
     for i in result_array:
         key_value = i.split('=')
-        total += calculate_price(int(key_value[0]), int(key_value[1]))
+        total += calculate_varying_price(int(key_value[0]), int(key_value[1]))
     return_dict = {'success': True, 'total': total}
     return JsonResponse(return_dict, safe=True)
 
@@ -59,3 +59,20 @@ def calculate_price(book_id, num):
     book_obj = Book.objects.get(id=book_id)
     rent = num * book_obj.book_charge.per_day_charge
     return rent
+
+
+def calculate_varying_price(book_id,num):
+    book_obj = Book.objects.get(id=book_id)
+    rent = 0
+    if book_obj.book_charge.min_charge != 0:
+        if num <= book_obj.book_charge.min_charge_days:
+            rent += book_obj.book_charge.min_charge
+        else:
+            rent += ((num - book_obj.book_charge.min_charge_days) * book_obj.book_charge.per_day_charge) +  book_obj.book_charge.min_charge
+    else:
+        rent = num * book_obj.book_charge.per_day_charge
+
+    return rent
+
+
+
