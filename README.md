@@ -1,9 +1,9 @@
 
-###LIVE URL 
+### LIVE URL 
 
 - http://139.59.24.38:8010/
 
-###GITHUB URL 
+### GITHUB URL 
  
  - https://github.com/sreejasn7/book_lend_store.git
 
@@ -28,10 +28,10 @@ It will take you to register / login page.
 The calculation is now based on story 3.
 
 
-###FOR PYTHON TESTS - 
+### FOR PYTHON TESTS - 
 - Used Selenium and unit test >>  python manage.py tests.
 
-####RUN THE APPLICATION AT LOCAL:
+#### RUN THE APPLICATION AT LOCAL:
    
 - Prior Installation
     - Docker
