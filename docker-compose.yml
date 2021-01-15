@@ -2,11 +2,11 @@ version: '3'
 
 services:
   django:
-    container_name: django_server
+    container_name: bls_con_v1
     build:
       context: .
       dockerfile: Dockerfile
-    image: docker_tutorial_django
+    image: bls_img_v1:latest
     stdin_open: true
     tty: true
     command: bash -c "./entry.sh && python manage.py runserver [::]:8010"
