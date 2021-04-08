@@ -1,4 +1,4 @@
-Django==2.2.10
+Django==2.2.20
 django-reset-migrations==0.3.1
 djangorestframework==3.10.1
 pytz==2019.1
