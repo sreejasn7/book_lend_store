@@ -59,3 +59,7 @@ Note:
 - Enabling multiprocessing / cron jobs. 
 
 
+#### Docker Hub changes
+1. The Dockerfile should contain the CMD .
+1. Currently its running in gunicorn.
+2. The gitignore is added
